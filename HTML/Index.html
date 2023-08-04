@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <title>Home</title>
+</head>
+<body>
+    <header>
+        <div class="px-3 py-2 text-bg-dark border-bottom">
+          <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+              <a href="/" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
+                <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
+              </a>
+    
+              <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
+                <li>
+                  <a href="Index.html" class="nav-link text-secondary">
+                    <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#home"></use></svg>
+                    Home
+                  </a>
+                </li>
+               
+                <li>
+                  <a href="Orders.html" class="nav-link text-white">
+                    <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#table"></use></svg>
+                   Making Orders
+                  </a>
+                </li>
+                <li>
+                  <a href="about.html" class="nav-link text-white">
+                    <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#grid"></use></svg>
+                   About
+                  </a>
+                </li>
+                <li>
+                  <a href="Contact.html" class="nav-link text-white">
+                    <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#people-circle"></use></svg>
+                   Contact us
+                  </a>
+                </li>
+                <li>
+                  <a href="Cart.html" class="nav-link text-white">
+                    <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#table"></use></svg>
+                    Cart
+                  </a>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="px-3 py-2 border-bottom mb-3">
+          <div class="container d-flex flex-wrap justify-content-center">
+            <form class="col-12 col-lg-auto mb-2 mb-lg-0 me-lg-auto" role="search">
+              <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+            </form>
+    
+            <div class="text-end">
+             <!-- Add an id attribute to the button -->
+<button type="button" class="btn btn-light text-dark me-2" id="loginButton">Login</button>
+
+
+<script>
+  
+  const loginButton = document.getElementById('loginButton');
+
+  // Add a click event listener to the button
+  loginButton.addEventListener('click', function() {
+    // Redirect the user to the "login.html" page
+    window.location.href = 'Login.html';
+  });
+</script>
+
+              <!-- Add an id attribute to the button -->
+<button type="button" class="btn btn-primary" id="signupButton">Sign-up</button>
+
+<!-- Add the JavaScript code -->
+<script>
+  // Get the button element by its id
+  const signupButton = document.getElementById('signupButton');
+
+  // Add a click event listener to the button
+  signupButton.addEventListener('click', function() {
+    // Redirect the user to the "signup.html" page
+    window.location.href = 'Signup.html';
+  });
+</script>
+
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+
+         
+      
+      
+        <!-- Marketing messaging and featurettes
+        ================================================== -->
+        <!-- Wrap the rest of the page in another container to center all the content. -->
+      
+        <div class="container marketing">
+      
+      
+          <hr class="featurette-divider">
+      
+          <div class="row featurette">
+            <div class="col-md-7">
+              <h2 class="featurette-heading fw-normal lh-1">Italian Pizza. <span class="text-body-secondary">It’ll blow your mind.</span></h2>
+              <p class="lead">Italian pizza is a culinary masterpiece that captures the essence of Italian gastronomy. With its origins tracing back to the vibrant streets of Naples, this classic dish has won the hearts of food enthusiasts across the globe. The secret to its allure lies in the art of simplicity and the use of high-quality, authentic ingredients.</p>
+            </div>
+            <div class="col-md-5">
+                <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src="C:\Users\Marwan Enani\Desktop\WEB-FINAL\IMAGES\pizza1.jpg" alt="Placeholder: 500x500" width="500" height="500">
+          </div>
+      
+          <hr class="featurette-divider">
+      
+          <div class="row featurette">
+            <div class="col-md-7 order-md-2">
+              <h2 class="featurette-heading fw-normal lh-1">Juicy Burgers. <span class="text-body-secondary">See for yourself.</span></h2>
+              <p class="lead">Juicy burgers are a mouthwatering delight that tantalizes the taste buds and satisfies the most intense cravings. Bursting with flavor and succulence, these iconic sandwiches have become a symbol of comfort food and a universal favorite for food enthusiasts of all ages.</p>
+            </div>
+            <div class="col-md-5 order-md-1">
+                <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src="C:\Users\Marwan Enani\Desktop\WEB-FINAL\IMAGES\burger 1.jpg" alt="Placeholder: 500x500" width="500" height="500">
+          </div>
+      
+          <hr class="featurette-divider">
+      
+          <div class="row featurette">
+            <div class="col-md-7">
+              <h2 class="featurette-heading fw-normal lh-1">Fresh Drinks, this one. <span class="text-body-secondary">Checkmate.</span></h2>
+              <p class="lead">Fresh drinks are the epitome of revitalization, a symphony of flavors that celebrate the vibrant essence of nature's bountiful offerings. Whether enjoyed on a scorching summer day or as a refreshing pick-me-up, these beverages invigorate the senses and nourish the soul.</p>
+            </div>
+            <div class="col-md-5">
+                <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src="C:\Users\Marwan Enani\Desktop\WEB-FINAL\IMAGES\juice 1.jpg" alt="Placeholder: 500x500" width="500" height="500">
+
+            </div>
+          </div>
+      
+          <hr class="featurette-divider">
+      
+          <!-- /END THE FEATURETTES -->
+      
+        </div><!-- /.container -->
+      
+      
+        <!-- FOOTER -->
+        <footer class="container">
+          <p class="float-end"><a href="#">Back to top</a></p>
+          <p>© 2017–2023 Company, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+        </footer>
+      </main>
+
+
+
+    <div class="container">
+        <footer class="py-3 my-4">
+          <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Features</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pricing</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
+          </ul>
+          <p class="text-center text-body-secondary">© 2023 Company, Inc</p>
+        </footer>
+      </div>
+    
+
+    
+</body>
+</html>
