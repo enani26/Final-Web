@@ -44,11 +44,33 @@
                 <li>
                   <a href="Cart.html" class="nav-link text-white">
                     <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#table"></use></svg>
-                    Cart
+                    🛒
                   </a>
                 </li>
 
+                <li>
+                  Views
+                  <label for="views">Choose a view:</label>
+                  <select name="views" id="views">
+                      <option value="index.html">Home</option>
+                      <option value="Cashierview.html">Cashier</option>
+                      <option value="qualitycontrol.html">Quality Control</option>
+                  </select>
+              </li>
               </ul>
+              <script>
+                // Get the select element
+                const viewsSelect = document.getElementById("views");
+        
+                // Event listener to handle view selection
+                viewsSelect.addEventListener("change", function () {
+                    // Get the selected option value
+                    const selectedView = viewsSelect.value;
+        
+                    // Redirect to the selected view page
+                    window.location.href = selectedView;
+                });
+            </script>
             </div>
           </div>
         </div>
