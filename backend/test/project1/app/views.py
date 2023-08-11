@@ -3,59 +3,53 @@ from  product.models import Pizza
 from  product.models import Burger
 from  product.models import Juice
 
-
 def index(request):
-  
-  dataform = LoginForm(request.POST)
-  dataform.save()
-#username = request.POST.get('username')
-#password = request.POST.get('password')
-#data= Login(username=username, password=password)
-#data.save()
+   # dataform = LoginForm(request.POST)
+    #dataform.save()
+    return render(request, 'apps/index.html')  #{'if': dataform})
 
-    return render(request,'apps/index.html',{'if':Loginform})
-    
 def about(request):
-    return render(request,'apps/about.html')
+    return render(request, 'apps/about.html')
 
 def add_casheir(request):
-    return render(request,'apps/add_casheir.html')
+    return render(request, 'apps/add_casheir.html')
 
 def cart(request):
-    return render(request,'apps/Cart.html')
+    return render(request, 'apps/Cart.html')
 
 def cashier(request):
-    return render(request,'apps/cashier.html')
+    return render(request, 'apps/cashier.html')
 
 def Cashierview(request):
-    return render(request,'apps/Cashierview.html')
+    return render(request, 'apps/Cashierview.html')
 
 def Contact(request):
-    return render(request,'apps/Contact.html')
+    return render(request, 'apps/Contact.html')
 
 def Login(request):
-    return render(request,'apps/Login.html')
+    return render(request, 'apps/Login.html')
 
 def Orders(request):
-    return render(request,'apps/Orders.html')
+    return render(request, 'apps/Orders.html')
 
 def qc_cashier(request):
-    return render(request,'apps/quality_control_cashier.html')
+    return render(request, 'apps/quality_control_cashier.html')
 
 def qc_users(request):
-    return render(request,'apps/quality_control_users.html')
+    return render(request, 'apps/quality_control_users.html')
 
 def qc_view(request):
-    return render(request,'apps/quality_control_view.html')
+    return render(request, 'apps/quality_control_view.html')
 
 def register(request):
-    return render(request,'apps/register.html')    
+    return render(request, 'apps/register.html')
 
 def Signup(request):
-    return render(request,'apps/Signup.html')
+    return render(request, 'apps/Signup.html')
 
 def menu(request):
-    return render(request,'apps/menu.html', {'piz':Pizza.objects.all().order_by('name').exclude(available=False),'bur':Burger.objects.all().order_by('name').exclude(available=False),'ju':Juice.objects.all().order_by('name').exclude(available=False)})
-
-
-# Create your views here.
+    return render(request, 'apps/menu.html', {
+        'piz': Pizza.objects.all().order_by('name').exclude(available=False),
+        'bur': Burger.objects.all().order_by('name').exclude(available=False),
+        'ju': Juice.objects.all().order_by('name').exclude(available=False),
+    })
