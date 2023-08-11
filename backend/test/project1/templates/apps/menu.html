@@ -25,7 +25,7 @@
 
         <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
           <li>
-            <a href="" class="nav-link text-secondary">
+            <a href="/" class="nav-link text-secondary">
               <svg class="bi d-block mx-auto mb-1" width="24" height="24">
                 <use xlink:href="#home"></use>
               </svg>
@@ -34,11 +34,11 @@
           </li>
 
           <li>
-            <a href="item.html" class="nav-link text-white">
+            <a href="Orders.html" class="nav-link text-white">
               <svg class="bi d-block mx-auto mb-1" width="24" height="24">
                 <use xlink:href="#table"></use>
               </svg>
-              selected item
+              making order
             </a>
           </li>
           <li>
@@ -111,6 +111,9 @@
             <h6>{{i.Characteristic }}</h6>
             <h6>{{i.price }} egp</h6>
           </ul>
+          <img src="{{i.img.url}}" alt="food view">
+                   <p class="float-end"><a href="item.html">details</a></p>
+
           <hr>
           {% endfor %}
 
@@ -124,6 +127,9 @@
             <h6>{{i.Characteristic }}</h6>
             <h6>{{i.price }} egp</h6>
           </ul>
+          <img src="{{i.img.url}}" alt="food view">
+          <p class="float-end"><a href="item.html">details</a></p>
+
           <hr>
 
           {% endfor %}
@@ -138,8 +144,10 @@
             <h6>{{i.Characteristic }}</h6>
             <h6>{{i.price }} egp</h6>
           </ul>
-          <hr>
+          <img src="{{i.img.url}}" alt="food view">
+          <p class="float-end"><a href="item.html">details</a></p>
 
+          <hr>
           {% endfor %}
         </div>
 

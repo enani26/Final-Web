@@ -14,7 +14,7 @@ def add_casheir(request):
     return render(request,'apps/add_casheir.html')
 
 def cart(request):
-    return render(request,'apps/cart.html')
+    return render(request,'apps/Cart.html')
 
 def cashier(request):
     return render(request,'apps/cashier.html')
@@ -47,9 +47,7 @@ def Signup(request):
     return render(request,'apps/Signup.html')
 
 def menu(request):
-    return render(request,'apps/menu.html', {'piz':Pizza.objects.all(),'bur':Burger.objects.all(),'ju':Juice.objects.all()})
+    return render(request,'apps/menu.html', {'piz':Pizza.objects.all().order_by('name').exclude(available=False),'bur':Burger.objects.all().order_by('name').exclude(available=False),'ju':Juice.objects.all().order_by('name').exclude(available=False)})
 
 
-def item(request):
-    return render(request,'apps/item.html')
 # Create your views here.

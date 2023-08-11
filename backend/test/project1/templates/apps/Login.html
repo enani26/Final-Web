@@ -1,9 +1,12 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{%   static  'css/signup.css'   %}">
+
     <title>Login</title>
 </head>
 <body>
@@ -17,7 +20,7 @@
     
               <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
                 <li>
-                  <a href="Index.html" class="nav-link text-secondary">
+                  <a href="/" class="nav-link text-secondary">
                     <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#home"></use></svg>
                     Home
                   </a>
@@ -50,7 +53,7 @@
    
    
       <main class="form-signin w-100 m-auto">
-        <form id="signinForm" onsubmit="return validateForm()">
+        <form id="signinForm" onsubmit="return validateForm()" method="get">
           <img class="mb-4" src="C:\Users\Marwan Enani\Desktop\WEB-FINAL\IMAGES\Logo.jpg" alt="" width="72" height="57">
           <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
     

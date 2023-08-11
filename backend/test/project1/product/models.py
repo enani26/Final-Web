@@ -73,16 +73,7 @@ class Juice(models.Model):
 
   
 
-class user(models.Model):
 
- fname = models.CharField(max_length=50)
- lname = models.CharField(max_length=50)
- email=models.CharField(max_length=500)
-
-
- def __str__ (self):  #(self) = call the class
-    return self.email  #to be named by the the item name in the admin page
-     
      
  
 

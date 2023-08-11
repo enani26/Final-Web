@@ -18,13 +18,12 @@ path('Contact.html',views.Contact,name='Contact'),
 
 path('Login.html',views.Login,name='Login'),
 
-path('rders.html',views.Orders,name='Orders'),
+path('Orders.html',views.Orders,name='Orders'),
 
 path('register.html',views.register,name='register'),
 
 path('menu.html',views.menu,name='menu'),
 
-path('item.html',views.item,name='item'),
 
 
 
