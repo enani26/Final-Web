@@ -5,7 +5,15 @@ from  product.models import Juice
 
 
 def index(request):
-    return render(request,'apps/index.html')
+  
+  dataform = LoginForm(request.POST)
+  dataform.save()
+#username = request.POST.get('username')
+#password = request.POST.get('password')
+#data= Login(username=username, password=password)
+#data.save()
+
+    return render(request,'apps/index.html',{'if':Loginform})
     
 def about(request):
     return render(request,'apps/about.html')
