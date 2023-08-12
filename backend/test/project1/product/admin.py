@@ -1,10 +1,8 @@
 from django.contrib import admin
-from .models import Pizza,Burger,Juice
+from .models import MenuItem, CartItem, Order
 
-
-admin.site.register(Pizza)
-admin.site.register(Burger)
-admin.site.register(Juice)
-
+admin.site.register(MenuItem)
+admin.site.register(CartItem)
+admin.site.register(Order)
 
 # Register your models here.

@@ -73,7 +73,7 @@
   {% for menu_item in menu_items %}
   <h3>{{ menu_item.name }}</h3>
   <p>Price: ${{ menu_item.price }}</p>
-  <a href="{% url 'add_to_cart' menu_item.id %}">Add to Cart</a>
+  <a href="{% checkout.html %}">Add to Cart</a>
   <hr>
   {% endfor %}
 

@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
   <link rel="stylesheet" href="{%   static  'css/index.css'   %}">
-  <title>Place your order</title>
+  <title>cart</title>
 </head>
 
 <body>
@@ -55,12 +55,7 @@
                 Contact us
               </a>
             </li>
-            <a href="Cart.html" class="nav-link text-white">
-              <svg class="bi d-block mx-auto mb-1" width="24" height="24">
-                <use xlink:href="#table"></use>
-              </svg>
-              Cart
-            </a>
+           
           </ul>
         </div>
       </div>
@@ -70,14 +65,14 @@
   </header>
 
 
-
-  {% for menu_item in menu_items %}
-  <h3>{{ menu_item.name }}</h3>
-  <p>Price: ${{ menu_item.price }}</p>
-  <a href="{% url 'add_to_cart' menu_item.id %}">Add to Cart</a>
-  <hr>
-  {% endfor %}
-
+  <h1>Your Cart</h1>
+  <ul>
+    {% for item in cart_items %}
+      <li>{{ item.quantity }} x {{ item.menu_item.name }} - ${{ item.menu_item.price }}</li>
+    {% endfor %}
+  </ul>
+  <p>Total Price: ${{ total_price }}</p>
+  <a href="{% url 'checkout' %}">Proceed to Checkout</a>
 
 
 

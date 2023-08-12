@@ -38,7 +38,7 @@
               <svg class="bi d-block mx-auto mb-1" width="24" height="24">
                 <use xlink:href="#table"></use>
               </svg>
-              making order
+              Cart
             </a>
           </li>
           <li>
@@ -90,60 +90,59 @@
         <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
       </form>
 
-
       <main>
         <div class="row featurette">
-          <h1><i style="color:crimson;">Pizza</i></h1>
-          <br>
-          {% for i in piz%}
-          <ul>
-            <li>
-              <h4>{{i.name }}</h4>
-            </li>
-            <h6>{{i.Characteristic }}</h6>
-            <h6>{{i.price }} egp</h6>
-          </ul>
-          <img src="{{i.img.url}}" alt="food view">
-                   <p class="float-end"><a href="Orders.html">Add to Cart</a></p>
-
-          <hr>
-          {% endfor %}
-
-          <h1><i style="color:crimson;">Burger</i></h1>
-          <br>
-          {% for i in bur%}
-          <ul>
-            <li>
-              <h4>{{i.name }}</h4>
-            </li>
-            <h6>{{i.Characteristic }}</h6>
-            <h6>{{i.price }} egp</h6>
-          </ul>
-          <img src="{{i.img.url}}" alt="food view">
-          <p class="float-end"><a href="item.html">Add to Cart</a></p>
-
-          <hr>
-
-          {% endfor %}
-
-          <h1><i style="color:crimson;">Juice</i></h1>
-          <br>
-          {% for i in ju%}
-          <ul>
-            <li>
-              <h4>{{i.name }}</h4>
-            </li>
-            <h6>{{i.Characteristic }}</h6>
-            <h6>{{i.price }} egp</h6>
-          </ul>
-          <img src="{{i.img.url}}" alt="food view">
-          <p class="float-end"><a href="item.html">Add to Cart</a></p>
-
-          <hr>
-          {% endfor %}
-        </div>
-
-
+          <div class="col-md-4">
+            <h1><i style="color:crimson;">Pizza</i></h1>
+            <br>
+            <ul>
+              {% for pizza in piz %}
+                <li>
+                  <h4>{{ pizza.name }}</h4>
+                  <h6>{{ pizza.characteristic }}</h6>
+                  <h6>{{ pizza.price }} egp</h6>
+                  <img src="{{ pizza.image.url }}" alt="food view">
+                  <p class="float-end"><a href="{% url 'add_to_cart' pizza.id %}">Add to Cart</a></p>
+                </li>
+                <hr>
+              {% endfor %}
+            </ul>
+          </div>
+          
+          <div class="col-md-4">
+            <h1><i style="color:crimson;">Burger</i></h1>
+            <br>
+            <ul>
+              {% for burger in bur %}
+                <li>
+                  <h4>{{ burger.name }}</h4>
+                  <h6>{{ burger.characteristic }}</h6>
+                  <h6>{{ burger.price }} egp</h6>
+                  <img src="{{ burger.image.url }}" alt="food view">
+                  <p class="float-end"><a href="{% url 'add_to_cart' burger.id %}">Add to Cart</a></p>
+                </li>
+                <hr>
+              {% endfor %}
+            </ul>
+          </div>
+          
+          <div class="col-md-4">
+            <h1><i style="color:crimson;">Juice</i></h1>
+            <br>
+            <ul>
+              {% for juice in ju %}
+                <li>
+                  <h4>{{ juice.name }}</h4>
+                  <h6>{{ juice.characteristic }}</h6>
+                  <h6>{{ juice.price }} egp</h6>
+                  <img src="{{ juice.image.url }}" alt="food view">
+                  <p class="float-end"><a href="{% url 'add_to_cart' juice.id %}">Add to Cart</a></p>
+                </li>
+                <hr>
+              {% endfor %}
+            </ul>
+          </div>
+          
 
         <footer class="container">
           <p class="float-end"><a href="#">Back to top</a></p>
@@ -168,3 +167,7 @@
 </body>
 
 </html>
+
+
+
+

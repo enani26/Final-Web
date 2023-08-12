@@ -100,8 +100,11 @@
 
 
             <main>
-                <h3>Order placed successfully!</h3>
-                <p>Total Price: ${{ order.total_price }}</p>
+                <h1>Checkout</h1>
+                <p>Total Price: ${{ total_price }}</p>
+                <form method="post">
+                  {% csrf_token %}
+                  <button type="submit">Place Order</button>
 
 
                 <footer class="container">
