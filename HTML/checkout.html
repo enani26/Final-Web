@@ -66,7 +66,15 @@
             </a>
           </li>
 
-
+          <li>
+            Views
+            <label for="views">Choose a view:</label>
+            <select name="views" id="views">
+              <option value="index.html">Home</option>
+              <option value="Cashierview.html">Cashier</option>
+              <option value="quality_control_view.html">Quality Control</option>
+            </select>
+          </li>
         </ul>
         <script>
           // Get the select element
@@ -92,57 +100,8 @@
 
 
       <main>
-        <div class="row featurette">
-          <h1><i style="color:crimson;">Pizza</i></h1>
-          <br>
-          {% for i in piz%}
-          <ul>
-            <li>
-              <h4>{{i.name }}</h4>
-            </li>
-            <h6>{{i.Characteristic }}</h6>
-            <h6>{{i.price }} egp</h6>
-          </ul>
-          <img src="{{i.img.url}}" alt="food view">
-                   <p class="float-end"><a href="Orders.html">Add to Cart</a></p>
-
-          <hr>
-          {% endfor %}
-
-          <h1><i style="color:crimson;">Burger</i></h1>
-          <br>
-          {% for i in bur%}
-          <ul>
-            <li>
-              <h4>{{i.name }}</h4>
-            </li>
-            <h6>{{i.Characteristic }}</h6>
-            <h6>{{i.price }} egp</h6>
-          </ul>
-          <img src="{{i.img.url}}" alt="food view">
-          <p class="float-end"><a href="item.html">Add to Cart</a></p>
-
-          <hr>
-
-          {% endfor %}
-
-          <h1><i style="color:crimson;">Juice</i></h1>
-          <br>
-          {% for i in ju%}
-          <ul>
-            <li>
-              <h4>{{i.name }}</h4>
-            </li>
-            <h6>{{i.Characteristic }}</h6>
-            <h6>{{i.price }} egp</h6>
-          </ul>
-          <img src="{{i.img.url}}" alt="food view">
-          <p class="float-end"><a href="item.html">Add to Cart</a></p>
-
-          <hr>
-          {% endfor %}
-        </div>
-
+        <h3>Order placed successfully!</h3>
+<p>Total Price: ${{ order.total_price }}</p>
 
 
         <footer class="container">

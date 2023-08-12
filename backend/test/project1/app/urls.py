@@ -8,7 +8,9 @@ path('about.html',views.about,name='about'),
 
 path('add_casheir.html',views.add_casheir,name='add_casheir'),
 
-path('cart.html',views.cart,name='cart'),
+path('Cart.html', views.cart, name='cart'),
+
+path('checkout.html',views.checkout,name='checkout'),
 
 path('cashier.html',views.cashier,name='cashier'),
 
@@ -25,6 +27,9 @@ path('register.html',views.register,name='register'),
 path('menu.html',views.menu,name='menu'),
 
 
-
+ path('menu/', views.menu, name='menu'),
+    path('add-to-cart/<int:menu_item_id>/', views.add_to_cart, name='add_to_cart'),
+    path('cart/', views.cart, name='cart'),
+    path('remove-from-cart/<int:cart_item_id>/', views.remove_from_cart, name='remove_from_cart'),
 
 ]
