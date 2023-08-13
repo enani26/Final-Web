@@ -17,7 +17,8 @@
             <img src="{% static 'img/pizza1.jpg' %}" alt="Pizza 1">
         </div>
        </div>
-        <form action="block" method="post" onsubmit="return validate(this)">
+       {% block content %}
+        <form  method="post" onsubmit="return validate(this)">
             {% csrf_token %}
         <div class="form-content">
             <div class="login-form">
@@ -25,7 +26,7 @@
                 <div class="input-boxes">
                 <div class="input-box">
                     <i class="fas fa-envelope"></i>
-                    <input type="text" name="Email" placeholder="Enter your email" required>
+                    <input type="email" name="email" placeholder="Enter your email" required>
                 </div>
                 <div class="input-box">
                <i class="fas fa-lock"></i>
@@ -43,7 +44,9 @@
                 </div>
                 </div>
                 </div>
+            </form>
                 <br>
+                <form  method="post" onsubmit="return validate(this)">
                 <div class="signup-form">
                     <div class="title">Sign Up</div>
                     <div class="input-boxes">
@@ -72,6 +75,7 @@
                 </div>
         </div>
         </form>
+        {% endblock content%}
         </div>
 </body>
 </html> 
