@@ -48,7 +48,7 @@
               <svg class="bi d-block mx-auto mb-1" width="24" height="24">
                 <use xlink:href="#table"></use>
               </svg>
-              Cart
+              🛒
             </a>
           </li>
           <li>
@@ -67,14 +67,7 @@
               Contact us
             </a>
           </li>
-          <li>
-            <a href="cart.html" class="nav-link text-white">
-              <svg class="bi d-block mx-auto mb-1" width="24" height="24">
-                <use xlink:href="#table"></use>
-              </svg>
-              🛒
-            </a>
-          </li>
+          
 
 
         </ul>
@@ -112,6 +105,7 @@
               <h6>{{ i.price }} egp</h6>
               <img src="{{ i.image.url }}" alt="food view">
             </li>
+            <a href="Orders.html">view in cart</a>
             <hr>
             {% endfor %}
           </ul>
@@ -133,6 +127,8 @@
             <hr>
             {% endfor %}
           </ul>
+          <a href="Orders.html">view in cart</a>
+
         </div>
 
         <br>
@@ -149,6 +145,8 @@
               <img src="{{ i.image.url }}" alt="food view">
 
             </li>
+            <a href="Orders.html">view in cart</a>
+
             <hr>
             {% endfor %}
 
