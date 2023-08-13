@@ -1,10 +1,15 @@
 
 
-
+from django.http import HttpResponse
 from django.shortcuts import render, redirect, get_object_or_404
-from .models import Login
+from .models import Loginn
 from product.models import MenuItem, CartItem, Order, Category  # Import Category enum
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import User
+
+
+
+
 
 def index(request):
     return render(request, 'apps/index.html')
@@ -29,8 +34,6 @@ def Cashierview(request):
 def Contact(request):
     return render(request, 'apps/Contact.html')
 
-def Login(request):
-    return render(request, 'apps/Login.html')
 
 def Orders(request):
     return render(request, 'apps/Orders.html')
@@ -46,14 +49,16 @@ def qc_view(request):
 
 def register(request):
     if request.method == 'POST':
-        email = request.POST.get('Email')
-        password = request.POST.get('password')
-        data = Login(email=email, password=password)
+        em = request.POST.get('email')
+        pw = request.POST.get('password')
+        data = Loginn(email=em, password=pw)
         data.save()
+        
+        # You can add any additional fields and attributes to the User model here
+
     return render(request, 'apps/register.html')
 
-def Signup(request):
-    return render(request, 'apps/Signup.html')
+
 
 @login_required
 def menu(request):
@@ -116,10 +121,7 @@ def checkout(request):
 
 
 
-from django.shortcuts import render, redirect, get_object_or_404
-from .models import Login
-from product.models import MenuItem, CartItem, Order
-from django.contrib.auth.decorators import login_required
+
 
 def index(request):
     return render(request, 'apps/index.html')
@@ -159,16 +161,8 @@ def qc_users(request):
 def qc_view(request):
     return render(request, 'apps/quality_control_view.html')
 
-def register(request):
-    if request.method == 'POST':
-        email = request.POST.get('Email')
-        password = request.POST.get('password')
-        data = Login(email=email, password=password)
-        data.save()
-    return render(request, 'apps/register.html')
 
-def Signup(request):
-    return render(request, 'apps/Signup.html')
+ 
 
 
 

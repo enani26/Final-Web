@@ -6,5 +6,5 @@ from . models import Juice
 def Pizza(request):
     return render(request, 'apps/menu.html')
 
-
+  
   

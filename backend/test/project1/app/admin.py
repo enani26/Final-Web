@@ -1,7 +1,7 @@
 from django.contrib import admin
-from . models import Login
+from .models import Loginn
 
 
 
 # Register your models here.
-admin.site.register(Login)
+admin.site.register(Loginn)
