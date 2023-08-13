@@ -116,7 +116,14 @@
 </script>-->
 
           <!-- Add an id attribute to the button -->
+          
+          
+          {% if request.session.email == undefined %}
           <button type="button" class="btn btn-primary" id="signupButton">login/Sign-up</button>
+          {% else %}
+          {{ request.session.email }}
+          <a href="logout"><button type="button" class="btn btn-primary">logout</button></a>
+          {% endif %}
 
           <!-- Add the JavaScript code -->
           <script>

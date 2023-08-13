@@ -51,6 +51,9 @@ def Signup(request):
     return render(request, 'apps/Signup.html')
 
 def menu(request):
+     # Retrieve a value from the session
+    user_email = request.session.get('user_email', None)
+
     return render(request, 'apps/menu.html', {
         'pizza': Pizza.objects.filter(category=Category.PIZZA, available=True).order_by('name'),
         'Burger': Burger.objects.filter(category=Category.BURGER, available=True).order_by('name'),
@@ -69,5 +72,17 @@ def register(request):
         password = request.POST.get('password')
         data = Loginn(email=email, password=password)
         data.save()
-        return render(request, 'apps/register.html')
+
+         # Store a value in the session
+        request.session.user.user = email
+
     return render(request, 'apps/register.html')
+
+def logout(request):
+    # ... perform logout logic ...
+    request.session.clear()
+   
+
+    # ... perform any other logout-related actions ...
+
+    return redirect('/')    
