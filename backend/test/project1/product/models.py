@@ -45,3 +45,5 @@ class Juice(models.Model):
         return self.name
 
 
+
+

@@ -7,4 +7,10 @@ def Pizza(request):
     return render(request, 'apps/menu.html')
 
   
-  
+def register(request):
+    if request.method == 'POST':
+        email = request.POST.get('Email')
+        password = request.POST.get('password')
+        data = Login(email=email, password=password)
+        data.save()
+    return render(request, 'apps/register.html')

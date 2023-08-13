@@ -1,5 +1,6 @@
+
+
 from django.contrib import admin
-from .models import Login
+from .models import Loginn
 
-
-admin.site.register(Login)
+admin.site.register(Loginn)
